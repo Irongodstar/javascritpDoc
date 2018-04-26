@@ -1,6 +1,7 @@
 # dva 文档
 
-## 什么 dva 是一个基于 redux, Redux-saga 和 react-router 的轻量级前端框架, 它本身没有创造出新的概念出来。 只是将那几个类库中提到的概念包装起来，制定了一套简便的开发模式而已。
+## 什么 dva 
+是一个基于 `redux`, `Redux-saga` 和 `react-router` 的轻量级前端框架, 它本身没有创造出新的概念出来。 只是将那几个类库中提到的概念包装起来，制定了一套简便的开发模式而已。
 
 
 
@@ -26,10 +27,6 @@ $ dva new myapp
 $ cd myapp
 $ npm start
 ```
-
-
-
-
 
 ## Reducer
 
