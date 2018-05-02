@@ -20,4 +20,4 @@
 
 ## 封装的库
 
-* [tools 库文档](./lib/tools.md)
+* [npm package 封装库文档](./lib/tools.md)
