@@ -6,7 +6,7 @@
 
 ## 原理架构图
 
-![](./images/dav-data-view.png)
+![](./images/data.png)
 
 
 根据官方提供的dva原理的基础, 并结合我们现在使用的构架进行重新绘制.
