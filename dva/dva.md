@@ -30,7 +30,7 @@ $ npm start
 
 ## Dva 原理架构图
 
-![](./images/dav.png)
+![](../images/dav.png)
 
 ## Reducer
 
