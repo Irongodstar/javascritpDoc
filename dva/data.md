@@ -62,7 +62,6 @@ export default modelExtend(pageModel, {
 
   subscriptions: {
     setup ({ dispatch, history }) {
-        console.log("111111", history);
       history.listen((location) => {
         if (location.pathname === '/agent/list') {
           const payload = queryString.parse(location.search) || { page: 1, pageSize: 10 }
@@ -133,20 +132,33 @@ export default modelExtend(pageModel, {
 
 ### 异步请求数据
 现在, 我们要回顾一下怎么发起向后端的异步请求. 我们这里使用的 `axios` 发起 `GET` / `POST` 请求. 请下面我们来看一下代码.
+这里我们看一下 agentLists 的结构.
 
+
+
+server/user.js
 ```js
+export const agentLists = (params) => request.get(agentList, params);
+```
 
+上面中的 agentList 是具体的访问地址.
+server/url.js
+```js
+export default {
+  agentList: `${config.apiPrefix}/agent/list`,
+}
 ```
 
 
+就去到彪哥封装的 request.js 文件中去了.
 
 
 
-1. router
-2. model
-    1. subscription
-    2. call
-    3. axios
-    5. effect
-    6. reducer
-3. connect component
+### 数据返回触发 reducers
+数据请求成功后, 会触发 reducers.
+
+
+
+### reducers
+Reducers 就会是更新组件的状态, react发现组件的状态发生改变了, 就需要重新渲染页面.
+
