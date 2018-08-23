@@ -13,12 +13,15 @@ export default {
 ```
 
 2. 使用收藏组件
-:postId: 相关帖子的Id
-:userId: 当前登录人的Id, 如果没有登录, userId为null.(单击后没有反映)
-@callback: 回调函数, 当单击后, 将数据提交给服务器. 并服务器返回正确的反馈.
 
 ```vue.js
 <vbookmark :status="bmark.collection" :postId="bmark.id" :userId="userInfo.userId" @callback="refreshBookMark"/>
+```
+参数说明:
+```vue.js
+:postId: 相关帖子的Id
+:userId: 当前登录人的Id, 如果没有登录, userId为null.(单击后没有反映)
+@callback: 回调函数, 当单击后, 将数据提交给服务器. 并服务器返回正确的反馈.
 ```
 
 3. 实现callback函数
