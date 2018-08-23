@@ -19,6 +19,7 @@ export default {
 ```
 参数说明:
 ```vue.js
+:status: 帖子现在的状态. 如: 收藏还是没有收藏
 :postId: 相关帖子的Id
 :userId: 当前登录人的Id, 如果没有登录, userId为null.(单击后没有反映)
 @callback: 回调函数, 当单击后, 将数据提交给服务器. 并服务器返回正确的反馈.
